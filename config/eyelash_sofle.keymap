@@ -140,7 +140,7 @@
 
         caps {
             bindings = <&caps_word>;
-            key-positions = <50 49>;
+            key-positions = <26 27>;
         };
     };
 
@@ -156,7 +156,7 @@
 &kp GRAVE    &kp Q                  &kp W                    &kp E                &kp R                    &kp T                        &mmv MOVE_DOWN   &kp Y                       &kp U                     &kp I                 &kp O                     &kp P                      &kp BSLH
 &tap_escape  &HomeRow LEFT_SHIFT A  &HomeRow LEFT_CONTROL S  &HomeRow LEFT_ALT D  &HomeRow LEFT_COMMAND F  &kp G                        &mmv MOVE_LEFT   &kp H                       &HomeRow RIGHT_COMMAND J  &HomeRow RIGHT_ALT K  &HomeRow RIGHT_CONTROL L  &HomeRow RIGHT_SHIFT SEMI  &kp APOS
 &kp LSHFT    &kp Z                  &kp X                    &kp C                &kp V                    &kp B                        &mmv MOVE_RIGHT  &kp N                       &kp M                     &kp COMMA             &kp DOT                   &kp FSLH                   &kp RIGHT_SHIFT
-&kp C_MUTE   &kp LCTRL              &kp LEFT_GUI             &kp LEFT_GUI         &mo 3                    &HomeRow LEFT_SHIFT SPACE    &mkp LCLK        &HomeRow RIGHT_SHIFT ENTER  &mo 1                     &kp BACKSPACE         &kp RIGHT_SHIFT           &kp DELETE
+&kp C_MUTE   &kp LCTRL              &kp LEFT_GUI             &kp F18              &mo 3                    &HomeRow LEFT_SHIFT SPACE    &mkp LCLK        &HomeRow RIGHT_SHIFT ENTER  &mo 1                     &kp BACKSPACE         &kp RIGHT_SHIFT           &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -165,11 +165,11 @@
 
         nav {
             bindings = <
-&kp GRAVE   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &mmv MOVE_UP     &kp F6     &kp F7    &kp F8    &kp F9     &kp F10   &trans
-&kp GRAVE   &trans  &trans  &trans  &trans  &trans    &mmv MOVE_DOWN   &kp PG_UP  &kp END   &kp UP    &kp HOME   &kp HOME  &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END   &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &trans     &trans    &trans    &trans     &trans    &trans
-&kp C_MUTE  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans     &trans    &trans    &trans     &trans
+&kp GRAVE   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &mmv MOVE_UP     &kp F6     &kp F7                  &kp F8    &kp F9                   &kp F10   &trans
+&kp GRAVE   &trans  &trans  &trans  &trans  &trans    &mmv MOVE_DOWN   &kp PG_UP  &kp LS(LA(LEFT_ARROW))  &kp UP    &kp LA(LS(RIGHT_ARROW))  &kp HOME  &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT                &kp DOWN  &kp RIGHT                &kp END   &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &trans     &trans                  &trans    &trans                   &trans    &trans
+&kp C_MUTE  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans     &trans                  &trans    &trans                   &trans
             >;
 
             display-name = "layer1";
@@ -188,11 +188,11 @@
 
         num {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F12    &trans  &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &trans     &trans  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans  &kp N5  &kp N6  &kp N7  &kp N8  &trans     &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &kp N0  &trans  &trans
             >;
         };
 
