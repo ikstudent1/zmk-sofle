@@ -64,7 +64,7 @@
         };
 
         layer4 {
-            bindings = <&mo 6>;
+            bindings = <&mo 0>;
             key-positions = <59 60 61>;
         };
 
@@ -99,13 +99,43 @@
         };
 
         layer_4 {
-            bindings = <&mo 6>;
+            bindings = <&mo 0>;
             key-positions = <56 57 55>;
         };
 
         mouse_nav {
-            bindings = <&mo 3>;
+            bindings = <&mo 2>;
             key-positions = <56 60>;
+        };
+
+        less_than {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <17 18>;
+        };
+
+        greater_than {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <20 21>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <30 31>;
+        };
+
+        underscore {
+            bindings = <&kp UNDER>;
+            key-positions = <33 34>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <43 44>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <46 47>;
         };
     };
 
@@ -117,11 +147,11 @@
 
         layer0 {
             bindings = <
-&kp ESC      &kp N1                 &kp N2               &kp N3               &kp N4                   &kp N5                       &kp UP_ARROW     &kp N6                      &kp N7                    &kp N8                &kp N9                    &kp N0                     &kp BACKSPACE
-&kp GRAVE    &kp Q                  &kp W                &kp E                &kp R                    &kp T                        &kp DOWN_ARROW   &kp Y                       &kp U                     &kp I                 &kp O                     &kp P                      &kp BSLH
-&tap_escape  &HomeRow LEFT_SHIFT A  &HomeRow LEFT_ALT S  &HomeRow LEFT_ALT D  &HomeRow LEFT_COMMAND F  &kp G                        &kp LEFT_ARROW   &kp H                       &HomeRow RIGHT_COMMAND J  &HomeRow RIGHT_ALT K  &HomeRow L RIGHT_CONTROL  &HomeRow RIGHT_SHIFT SEMI  &kp APOS
-&kp LSHFT    &kp Z                  &kp X                &kp C                &kp V                    &kp B                        &kp RIGHT_ARROW  &kp N                       &kp M                     &kp COMMA             &kp DOT                   &kp FSLH                   &kp RIGHT_SHIFT
-&kp C_MUTE   &kp LCTRL              &kp LEFT_GUI         &kp LEFT_ALT         &mo 2                    &HomeRow LEFT_SHIFT SPACE    &kp ENTER        &HomeRow RIGHT_SHIFT ENTER  &mo 1                     &kp BACKSPACE         &kp RIGHT_SHIFT           &kp DELETE
+&kp ESC      &kp N1                 &kp N2               &kp N3               &kp N4                   &kp N5                       &mmv MOVE_UP     &kp N6                      &kp N7                    &kp N8                &kp N9                    &kp N0                     &kp BACKSPACE
+&kp GRAVE    &kp Q                  &kp W                &kp E                &kp R                    &kp T                        &mmv MOVE_DOWN   &kp Y                       &kp U                     &kp I                 &kp O                     &kp P                      &kp BSLH
+&tap_escape  &HomeRow LEFT_SHIFT A  &HomeRow LEFT_ALT S  &HomeRow LEFT_ALT D  &HomeRow LEFT_COMMAND F  &kp G                        &mmv MOVE_LEFT   &kp H                       &HomeRow RIGHT_COMMAND J  &HomeRow RIGHT_ALT K  &HomeRow L RIGHT_CONTROL  &HomeRow RIGHT_SHIFT SEMI  &kp APOS
+&kp LSHFT    &kp Z                  &kp X                &kp C                &kp V                    &kp B                        &mmv MOVE_RIGHT  &kp N                       &kp M                     &kp COMMA             &kp DOT                   &kp FSLH                   &kp RIGHT_SHIFT
+&kp C_MUTE   &kp LCTRL              &kp LEFT_GUI         &kp LEFT_ALT         &mo 3                    &HomeRow LEFT_SHIFT SPACE    &mkp LCLK        &HomeRow RIGHT_SHIFT ENTER  &mo 1                     &kp BACKSPACE         &kp RIGHT_SHIFT           &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -141,16 +171,6 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        num {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
         mouse_nav {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans          &trans           &trans  &trans
@@ -158,6 +178,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans          &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans          &trans           &trans
+            >;
+        };
+
+        num {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
