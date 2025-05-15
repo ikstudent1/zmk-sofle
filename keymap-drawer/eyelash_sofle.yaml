@@ -14,7 +14,7 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:keyboard-esc$$
+  - '&tap_escape'
   - Q
   - W
   - E
@@ -395,3 +395,15 @@ combos:
   k: special
 - p: [59, 60, 61]
   k: '4'
+- p: [16, 17]
+  k: {t: '[', s: '{'}
+- p: [30, 29]
+  k: '{'
+- p: [43, 42]
+  k: (
+- p: [21, 22]
+  k: {t: ']', s: '}'}
+- p: [34, 35]
+  k: '}'
+- p: [47, 48]
+  k: )
