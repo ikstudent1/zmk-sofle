@@ -59,12 +59,12 @@
         compatible = "zmk,combos";
 
         layer3 {
-            bindings = <&mo 3>;
+            bindings = <&mo 5>;
             key-positions = <59 60>;
         };
 
         layer4 {
-            bindings = <&mo 4>;
+            bindings = <&mo 6>;
             key-positions = <59 60 61>;
         };
 
@@ -97,6 +97,16 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <47 48>;
         };
+
+        layer_4 {
+            bindings = <&mo 6>;
+            key-positions = <56 57 55>;
+        };
+
+        mouse_nav {
+            bindings = <&mo 3>;
+            key-positions = <56 60>;
+        };
     };
 
     behaviors {
@@ -108,8 +118,8 @@
         layer0 {
             bindings = <
 &kp ESC      &kp N1                 &kp N2               &kp N3               &kp N4                   &kp N5                       &kp UP_ARROW     &kp N6                      &kp N7                    &kp N8                &kp N9                    &kp N0                     &kp BACKSPACE
-&tap_escape  &kp Q                  &kp W                &kp E                &kp R                    &kp T                        &kp DOWN_ARROW   &kp Y                       &kp U                     &kp I                 &kp O                     &kp P                      &kp BSLH
-&kp TAB      &HomeRow LEFT_SHIFT A  &HomeRow LEFT_ALT S  &HomeRow LEFT_ALT D  &HomeRow LEFT_COMMAND F  &kp G                        &kp LEFT_ARROW   &kp H                       &HomeRow RIGHT_COMMAND J  &HomeRow RIGHT_ALT K  &HomeRow L RIGHT_CONTROL  &HomeRow RIGHT_SHIFT SEMI  &kp APOS
+&kp GRAVE    &kp Q                  &kp W                &kp E                &kp R                    &kp T                        &kp DOWN_ARROW   &kp Y                       &kp U                     &kp I                 &kp O                     &kp P                      &kp BSLH
+&tap_escape  &HomeRow LEFT_SHIFT A  &HomeRow LEFT_ALT S  &HomeRow LEFT_ALT D  &HomeRow LEFT_COMMAND F  &kp G                        &kp LEFT_ARROW   &kp H                       &HomeRow RIGHT_COMMAND J  &HomeRow RIGHT_ALT K  &HomeRow L RIGHT_CONTROL  &HomeRow RIGHT_SHIFT SEMI  &kp APOS
 &kp LSHFT    &kp Z                  &kp X                &kp C                &kp V                    &kp B                        &kp RIGHT_ARROW  &kp N                       &kp M                     &kp COMMA             &kp DOT                   &kp FSLH                   &kp RIGHT_SHIFT
 &kp C_MUTE   &kp LCTRL              &kp LEFT_GUI         &kp LEFT_ALT         &mo 2                    &HomeRow LEFT_SHIFT SPACE    &kp ENTER        &HomeRow RIGHT_SHIFT ENTER  &mo 1                     &kp BACKSPACE         &kp RIGHT_SHIFT           &kp DELETE
             >;
@@ -120,11 +130,11 @@
 
         nav {
             bindings = <
-&kp GRAVE   &kp F1          &kp F2          &kp F3          &kp F4           &kp F5      &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&kp GRAVE   &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &trans          &trans          &trans          &trans           &trans      &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans          &trans          &trans          &trans           &trans      &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp GRAVE   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &mmv MOVE_UP     &kp F6     &kp F7    &kp F8    &kp F9     &kp F10   &trans
+&kp GRAVE   &trans  &trans  &trans  &trans  &trans    &mmv MOVE_DOWN   &kp PG_UP  &kp END   &kp UP    &kp HOME   &kp HOME  &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END   &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &trans     &trans    &trans    &trans     &trans    &trans
+&kp C_MUTE  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans     &trans    &trans    &trans     &trans
             >;
 
             display-name = "layer1";
@@ -138,6 +148,16 @@
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        mouse_nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans          &trans           &trans
             >;
         };
 
@@ -159,16 +179,6 @@
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
