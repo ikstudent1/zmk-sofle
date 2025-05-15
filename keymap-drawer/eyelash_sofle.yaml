@@ -29,7 +29,7 @@ layers:
   - {t: \, s: '|'}
   - '&tap_escape'
   - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
@@ -37,7 +37,7 @@ layers:
   - H
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '$$mdi:apple-keyboard-control$$', h: L}
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:apple-keyboard-option$$', type: held alternate}
+  - {t: '$$mdi:apple-keyboard-command$$', type: held alternate}
   - {t: num, type: held alternate}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$', type: held alternate}
   - $$mdi:mouse-left-click-outline$$
@@ -423,3 +423,5 @@ combos:
   k: +
 - p: [46, 47]
   k: {t: '=', s: +}
+- p: [50, 49]
+  k: $$mdi:alpha-w-box$$
